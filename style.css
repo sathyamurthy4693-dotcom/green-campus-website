@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f5fff6;
+    color: #183d27;
+}
+
+/* Navigation */
+
+header {
+    background: #064e32;
+    padding: 18px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #9cffb2;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+/* Hero Section */
+
+.hero {
+    min-height: 90vh;
+    background:
+        linear-gradient(rgba(0,40,20,0.65),
+        rgba(0,40,20,0.65)),
+        url("https://images.unsplash.com/photo-1448375240586-882707db888b");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    padding: 8%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 650px;
+    animation: slideUp 1.2s ease;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #8cff9e;
+}
+
+.hero p {
+    font-size: 19px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #28a745;
+    color: white;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #126b35;
+    transform: scale(1.05);
+}
+
+
+/* About */
+
+.about {
+    padding: 80px 12%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 35px;
+    color: #087443;
+    margin-bottom: 25px;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+
+/* Initiatives */
+
+.initiatives {
+    padding: 80px 8%;
+    background: #e9f8ec;
+    text-align: center;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    background: white;
+    padding: 35px 20px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 10px 25px rgba(0,100,50,0.2);
+}
+
+.icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    color: #087443;
+    margin-bottom: 15px;
+}
+
+.card p {
+    line-height: 1.7;
+}
+
+
+/* Impact */
+
+.impact {
+    background: #075c39;
+    padding: 80px 8%;
+    text-align: center;
+    color: white;
+}
+
+.impact h2 {
+    color: white;
+}
+
+.impact-container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.impact-box h3 {
+    font-size: 45px;
+    color: #9cffb2;
+}
+
+.impact-box p {
+    font-size: 18px;
+}
+
+
+/* Join Us */
+
+.join {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.join p {
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 450px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+input {
+    padding: 16px;
+    border: 1px solid #a5c9ae;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+}
+
+input:focus {
+    border-color: #087443;
+}
+
+
+/* Footer */
+
+footer {
+    background: #043d28;
+    color: white;
+    text-align: center;
+    padding: 35px;
+}
+
+footer h2 {
+    color: #9cffb2;
+}
+
+footer p {
+    margin: 10px;
+}
+
+
+/* Animation */
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Mobile Responsive */
+
+@media (max-width: 900px) {
+
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background: #064e32;
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .impact-container {
+        gap: 35px;
+    }
+
+}
